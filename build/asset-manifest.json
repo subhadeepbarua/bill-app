@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bill-det/static/css/main.782a71c1.css",
+    "main.js": "/bill-det/static/js/main.a1dd789c.js",
+    "static/js/787.d26eda84.chunk.js": "/bill-det/static/js/787.d26eda84.chunk.js",
+    "index.html": "/bill-det/index.html",
+    "main.782a71c1.css.map": "/bill-det/static/css/main.782a71c1.css.map",
+    "main.a1dd789c.js.map": "/bill-det/static/js/main.a1dd789c.js.map",
+    "787.d26eda84.chunk.js.map": "/bill-det/static/js/787.d26eda84.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.782a71c1.css",
+    "static/js/main.a1dd789c.js"
+  ]
+}

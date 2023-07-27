@@ -1,0 +1,68 @@
+.templateBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Use min-height to ensure the container takes at least the full viewport height */
+  background-color: #f0f0f0;
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the container's height */
+}
+
+.templateInput {
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(234, 228, 234);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.templateInput form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.templateInput span {
+  flex-basis: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.templateInput input {
+  flex-basis: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.templateInput .btn {
+  flex-basis: calc(50% - 5px);
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.templateInput #submit {
+  background-color: #007bff; /* Replace with your desired button color */
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.templateInput #history {
+  background-color: #28a745; /* Replace with your desired button color */
+  margin-left: 3px;
+  margin-left: 3px;
+
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 600px) {
+  .templateInput .btn {
+    flex-basis: 100%;
+    margin-top: 5px;
+  }
+}
+    
