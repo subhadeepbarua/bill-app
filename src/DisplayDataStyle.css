@@ -5,6 +5,11 @@
   padding: 10px;
   background-color: #007bff; /* Replace with your desired header background color */
   color: #fff;
+  justify-content: space-between;
+}
+
+.header-item{
+  justify-content: center;
 }
 
 
@@ -45,6 +50,7 @@
   width: 100%;
   border-collapse: collapse;
 }
+
 
 .display-table th, .display-table td {
     text-align: center;
