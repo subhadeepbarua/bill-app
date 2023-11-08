@@ -38,12 +38,22 @@ const DisplayData = ({ toggleView }) => {
   }, []);
 
   useEffect(() => {
-    const filteredData = invoice.filter(
-      (row) =>
-        (row.c[1]?.v && row.c[1].v.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        (row.c[7]?.v && row.c[7].v.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        (row.c[0]?.v && row.c[0].v.includes(searchQuery))
-    );
+    const filteredData = invoice.filter((row) => {
+      // Check if the value is a string before calling toLowerCase
+      const column1 = row.c[1]?.v;
+      const column7 = row.c[7]?.v;
+      const column0 = row.c[0]?.v;
+  
+      const matchesColumn1 =
+        typeof column1 === 'string' && column1.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesColumn7 =
+        typeof column7 === 'string' && column7.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesColumn0 =
+        typeof column0 === 'string' && column0.includes(searchQuery);
+  
+      return matchesColumn1 || matchesColumn7 || matchesColumn0;
+    });
+  
     setFilteredInvoice(filteredData);
   }, [invoice, searchQuery]);
 
@@ -54,12 +64,13 @@ const DisplayData = ({ toggleView }) => {
   return (
     <>
       <div className="header">
+      <div className='headerItem' >
+        <h2 >BILL & ORDER DATABASE</h2>
+        </div>
         <div className='headerItem'>
         <button  id="D-btn" onClick={toggleView}>Back</button>
         </div>
-        <div className='headerItem' style={{ alignItems:'flex-end' }}>
-        <h2 >BILL & ORDER DATABASE</h2>
-        </div>
+        
       </div>
 
       <div className="search-bar">
